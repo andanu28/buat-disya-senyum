@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Untuk Dek Disya 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+      animation: fadeInDown 2s ease;
+    }
+
+    .message {
+      max-width: 90%;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      animation: fadeInUp 3s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .hearts {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .heart {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: red;
+      transform: rotate(45deg);
+      animation: floatHearts 10s linear infinite;
+    }
+
+    .heart:before,
+    .heart:after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart:before {
+      top: -15px;
+      left: 0;
+    }
+
+    .heart:after {
+      left: -15px;
+      top: 0;
+    }
+
+    @keyframes floatHearts {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hai Dek Disya 😚</h1>
+  <div class="message">
+    alloooo kamu kenapa dekk?<br>
+    how ur day? kamu kurang mood hari ini?<br>
+    yaudah gapapa gausah dipaksa,<br>
+    lagi gamood lakuin hal yang bisa bikin kamu ketawaaa,<br><br>
+
+    aku tau kamu cape tapi ayo semangattt dan bertahan sedikit lagi,<br>
+    kamu tau ga? kalau kamu nyerah sekarang kamu gak bakal tau kebahagiaan apa yang nunggu kamu diujung sana<br><br>
+
+    ayoo percaya sama aku,<br>
+    tuhan ngga selamanya ngasih kamu cobaan teruss,<br>
+    tuhan bakal kasih kamu imbalan atas segala cobaan yang kamu alami,<br><br>
+
+    aku yakin dibalik itu semua kamu pasti akan segera merasakan kebahagiaan,<br>
+    kebahagiaan yang selama ini kamu tunggu,<br><br>
+
+    makasih banyaaa buat kamu yang bertahan sampai saat ini,<br>
+    kamu hebat aku bangga sama kamu,<br>
+    kamu keren anak baik, anak hebat,<br><br>
+
+    makasi yaa, makasi udah jadi orang kuat,<br>
+    ayooo kedepannya lebih kuat lagi ya dekk,<br>
+    kedepannya lagi pasti bakal ada banyaaa kebahagiaan yang menantii,<br><br>
+
+    makasi ga henti henti aku bakal bilang makasi,<br>
+    makasi uda jadi kuat,<br>
+    bakal aku usahain sekuatku ada disampingmu,<br><br>
+
+    <strong>AKU SELALU MENUNGGUMU,<br>SEMANGATT JUGA YAA ORANG YANG AKU KAGUMIII 🥰🥰😘</strong>
+  </div>
+
+  <div class="hearts">
+    <!-- Generate multiple hearts -->
+    <script>
+      const heartsContainer = document.querySelector(".hearts");
+      for (let i = 0; i < 30; i++) {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.style.left = `${Math.random() * 100}%`;
+        heart.style.animationDuration = `${5 + Math.random() * 5}s`;
+        heartsContainer.appendChild(heart);
+      }
+    </script>
+  </div>
+</body>
+</html>
